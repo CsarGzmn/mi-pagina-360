@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen 360¡</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        #container {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
+    <!-- Importar Panolens.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+    
+    <script>
+        // Crear el visor Panolens
+        const container = document.getElementById('container');
+        const viewer = new PANOLENS.Viewer({ container: container });
+        
+        // Agregar la imagen panor‡mica (reemplaza con tu imagen 360¡)
+        const panorama = new PANOLENS.ImagePanorama('360.jpg');
+        viewer.add(panorama);
+    </script>
+</body>
+</html>
